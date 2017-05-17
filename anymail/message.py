@@ -58,7 +58,7 @@ def attach_inline_image_file(message, path, subtype=None, idstring="img", domain
 
 def attach_inline_image(message, content, filename=None, subtype=None, idstring="img", domain=None):
     """Add inline image to an EmailMessage, and return its content id"""
-    content_id = make_msgid(idstring, domain)  # Content ID per RFC 2045 section 7 (with <...>)
+    content_id = make_msgid(idstring)  # Content ID per RFC 2045 section 7 (with <...>)
     image = MIMEImage(content, subtype)
     image.add_header('Content-Disposition', 'inline', filename=filename)
     image.add_header('Content-ID', content_id)

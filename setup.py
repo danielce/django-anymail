@@ -36,7 +36,7 @@ setup(
     license="BSD License",
     packages=["anymail"],
     zip_safe=False,
-    install_requires=["django>=1.8", "requests>=2.4.3", "six"],
+    install_requires=["django>=1.7.4", "requests>=2.4.3", "six"],
     extras_require={
         # This can be used if particular backends have unique dependencies
         # (e.g., AWS-SES would want boto).
